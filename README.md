@@ -1,2 +1,2 @@
 # MemeSTN
-## Our code, data, scripts, and notebooks are available now for submission "Learning Social Memory-guided Meta-knowledge for Human Flow Nowcasting in Disaster".
+## Our code, data, scripts, and notebooks are available now for submission "Learning Social Meta-knowledge for Nowcasting Human Flow in Disaster".
