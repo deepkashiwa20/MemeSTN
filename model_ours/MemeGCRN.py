@@ -377,11 +377,11 @@ class AGCRN_CMem(nn.Module):
 def main():
     import sys
     from torchsummary import summary
-    from Param import CHANNEL,N_NODE,TIMESTEP_IN,TIMESTEP_OUT
+    CHANNELIN,CHANNELOUT,N_NODE,TIMESTEP_IN,TIMESTEP_OUT,T_DIM = 1, 1, 1609, 6, 6, 32
     GPU = sys.argv[-1] if len(sys.argv) == 2 else '3'
     device = torch.device("cuda:{}".format(GPU)) if torch.cuda.is_available() else torch.device("cpu")
-    model = AGCRN(num_nodes=N_NODE, input_dim=CHANNEL, output_dim=CHANNEL, horizon=TIMESTEP_OUT).to(device)
-    summary(model, (TIMESTEP_IN, N_NODE, CHANNEL), device=device)
+    model = MemeGCRN(num_nodes=N_NODE, input_dim=CHANNELIN, output_dim=CHANNELOUT, horizon=TIMESTEP_OUT).to(device)
+    summary(model, [(TIMESTEP_IN, N_NODE, CHANNELIN), (TIMESTEP_IN+TIMESTEP_OUT, T_DIM)], device=device)
     
 if __name__ == '__main__':
     main()
