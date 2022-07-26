@@ -31,7 +31,7 @@ def mergeInfo(*args):
 def getModel():
     area_index = get_pref_id(pref_path, target_area)
     A = get_adj(adj_path, area_index)
-    adj_mx = sym_adj(A)
+    adj_mx = [sym_adj(A)]
     supports = [torch.tensor(i).to(device) for i in adj_mx]
     model = gwnet(device, num_nodes=num_variable, in_dim=opt.channelin, out_dim=opt.seq_len, supports=supports).to(device)
     summary(model, (opt.channelin, num_variable, opt.his_len), device=device)
