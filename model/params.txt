@@ -1,0 +1,120 @@
+[hurricane-poi]
+channel = 1
+event = hurricane
+flow_type = poi
+flow_path = ../data/poi_hour20190601_20191030.npy
+twitter_path = ../data/US_2019Hurricane_FL_all_tweet_count_by_county.csv
+adj_path = ../data/FL_county_adj_mtx.npy
+pref_path = ../data/Florida_counties.csv
+freq = 1H
+flow_start_date = 2019-06-01 00:00:00
+flow_end_date = 2019-10-30 23:59:59
+twitter_start_date = 2019-05-28 19:00:00
+twitter_end_date = 2019-11-01 18:00:00
+target_start_date = 2019-07-01 00:00:00
+target_end_date = 2019-09-10 23:00:00
+target_area = ['Alachua', 'Baker', 'Bay', 'Bradford', 'Brevard', 'Broward', 'Calhoun', 'Charlotte', 'Citrus', 'Clay',
+              'Collier', 'Columbia', 'DeSoto', 'Dixie', 'Duval', 'Escambia', 'Flagler', 'Franklin', 'Gadsden', 'Gilchrist',
+              'Glades', 'Gulf', 'Hamilton', 'Hardee', 'Hendry', 'Hernando', 'Highlands', 'Hillsborough', 'Holmes',
+              'Indian River', 'Jackson', 'Jefferson', 'Lafayette', 'Lake', 'Lee', 'Leon', 'Levy', 'Liberty', 'Madison',
+              'Manatee', 'Marion', 'Martin', 'Miami-Dade', 'Monroe', 'Nassau', 'Okaloosa', 'Okeechobee', 'Orange', 'Osceola',
+              'Palm Beach', 'Pasco', 'Pinellas', 'Polk', 'Putnam', 'Santa Rosa', 'Sarasota', 'Seminole', 'St. Johns', 'St. Lucie',
+              'Sumter', 'Suwannee', 'Taylor', 'Union', 'Volusia', 'Wakulla', 'Walton', 'Washington']
+
+[typhoon-inflow]
+channel = 1
+event = typhoon
+flow_type = inflow
+flow_path = ../data/inflow_hour20180101_20210228.npy
+adj_path = ../data/adjacency_matrix.npy
+twitter_path = ../data/Japan_2019Hurricane_Total_tweet_count.csv
+pref_path = ../data/Japan_prefectures.csv
+freq = 1H
+flow_start_date = 2018-01-01 00:00:00
+flow_end_date = 2021-02-28 23:59:59
+twitter_start_date = 2019-06-30 09:00:00
+twitter_end_date = 2019-10-31 08:00:00
+target_start_date = 2019-07-01 00:00:00
+target_end_date = 2019-10-30 23:00:00 
+# 2019-10-31 data is missing.
+target_area = ['Hokkaido', 'Aomori', 'Iwate', 'Miyagi', 'Akita', 'Yamagata',
+       'Fukushima', 'Ibaraki', 'Tochigi', 'Gunma', 'Saitama', 'Chiba', 'Tokyo',
+       'Kanagawa', 'Niigata', 'Toyama', 'Ishikawa', 'Fukui', 'Yamanashi',
+       'Nagano', 'Gifu', 'Shizuoka', 'Aichi', 'Mie', 'Shiga', 'Kyoto', 'Osaka',
+       'Hyogo', 'Nara', 'Wakayama', 'Tottori', 'Shimane', 'Okayama',
+       'Hiroshima', 'Yamaguchi', 'Tokushima', 'Kagawa', 'Ehime', 'Kochi',
+       'Fukuoka', 'Saga', 'Nagasaki', 'Kumamoto', 'Oita', 'Miyazaki',
+       'Kagoshima', 'Okinawa']
+
+[typhoon-outflow]
+channel = 1
+event = typhoon
+flow_type = outflow
+flow_path = ../data/outflow_hour20180101_20210228.npy
+adj_path = ../data/adjacency_matrix.npy
+twitter_path = ../data/Japan_2019Hurricane_Total_tweet_count.csv
+pref_path = ../data/Japan_prefectures.csv
+freq = 1H
+flow_start_date = 2018-01-01 00:00:00
+flow_end_date = 2021-02-28 23:59:59
+twitter_start_date = 2019-06-30 09:00:00
+twitter_end_date = 2019-10-31 08:00:00
+target_start_date = 2019-07-01 00:00:00
+target_end_date = 2019-10-30 23:00:00 
+# 2019-10-31 data is missing.
+target_area = ['Hokkaido', 'Aomori', 'Iwate', 'Miyagi', 'Akita', 'Yamagata',
+       'Fukushima', 'Ibaraki', 'Tochigi', 'Gunma', 'Saitama', 'Chiba', 'Tokyo',
+       'Kanagawa', 'Niigata', 'Toyama', 'Ishikawa', 'Fukui', 'Yamanashi',
+       'Nagano', 'Gifu', 'Shizuoka', 'Aichi', 'Mie', 'Shiga', 'Kyoto', 'Osaka',
+       'Hyogo', 'Nara', 'Wakayama', 'Tottori', 'Shimane', 'Okayama',
+       'Hiroshima', 'Yamaguchi', 'Tokushima', 'Kagawa', 'Ehime', 'Kochi',
+       'Fukuoka', 'Saga', 'Nagasaki', 'Kumamoto', 'Oita', 'Miyazaki',
+       'Kagoshima', 'Okinawa']
+
+[covid-inflow]
+channel = 1
+event = covid
+flow_type = inflow
+flow_path = ../data/inflow_hour20180101_20210228.npy
+adj_path = ../data/adjacency_matrix.npy
+twitter_path = ../data/Japan_COVID-19_Total_tweet_count.csv
+pref_path = ../data/Japan_prefectures.csv
+freq = 1H
+flow_start_date = 2018-01-01 00:00:00
+flow_end_date = 2021-02-28 23:59:59
+twitter_start_date = 2019-12-31 09:00:00
+twitter_end_date = 2021-02-28 08:00:00
+target_start_date = 2020-01-01 00:00:00 
+target_end_date = 2021-02-28 08:00:00
+target_area = ['Hokkaido', 'Aomori', 'Iwate', 'Miyagi', 'Akita', 'Yamagata',
+       'Fukushima', 'Ibaraki', 'Tochigi', 'Gunma', 'Saitama', 'Chiba', 'Tokyo',
+       'Kanagawa', 'Niigata', 'Toyama', 'Ishikawa', 'Fukui', 'Yamanashi',
+       'Nagano', 'Gifu', 'Shizuoka', 'Aichi', 'Mie', 'Shiga', 'Kyoto', 'Osaka',
+       'Hyogo', 'Nara', 'Wakayama', 'Tottori', 'Shimane', 'Okayama',
+       'Hiroshima', 'Yamaguchi', 'Tokushima', 'Kagawa', 'Ehime', 'Kochi',
+       'Fukuoka', 'Saga', 'Nagasaki', 'Kumamoto', 'Oita', 'Miyazaki',
+       'Kagoshima', 'Okinawa']
+
+[covid-outflow]
+channel = 1
+event = covid
+flow_type = outflow
+flow_path = ../data/outflow_hour20180101_20210228.npy
+adj_path = ../data/adjacency_matrix.npy
+twitter_path = ../data/Japan_COVID-19_Total_tweet_count.csv
+pref_path = ../data/Japan_prefectures.csv
+freq = 1H
+flow_start_date = 2018-01-01 00:00:00
+flow_end_date = 2021-02-28 23:59:59
+twitter_start_date = 2019-12-31 09:00:00
+twitter_end_date = 2021-02-28 08:00:00
+target_start_date = 2020-01-01 00:00:00 
+target_end_date = 2021-02-28 08:00:00
+target_area = ['Hokkaido', 'Aomori', 'Iwate', 'Miyagi', 'Akita', 'Yamagata',
+       'Fukushima', 'Ibaraki', 'Tochigi', 'Gunma', 'Saitama', 'Chiba', 'Tokyo',
+       'Kanagawa', 'Niigata', 'Toyama', 'Ishikawa', 'Fukui', 'Yamanashi',
+       'Nagano', 'Gifu', 'Shizuoka', 'Aichi', 'Mie', 'Shiga', 'Kyoto', 'Osaka',
+       'Hyogo', 'Nara', 'Wakayama', 'Tottori', 'Shimane', 'Okayama',
+       'Hiroshima', 'Yamaguchi', 'Tokushima', 'Kagawa', 'Ehime', 'Kochi',
+       'Fukuoka', 'Saga', 'Nagasaki', 'Kumamoto', 'Oita', 'Miyazaki',
+       'Kagoshima', 'Okinawa']
