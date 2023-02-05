@@ -1,5 +1,5 @@
 # MemeSTN
-### Official repository for "Learning Social Meta-knowledge for Nowcasting Human Mobility in Disaster" (WWW'23).
+### "Learning Social Meta-knowledge for Nowcasting Human Mobility in Disaster" (WWW'23).
 * Datasets Typhoon-JP, COVID-JP, and Hurricane-US are stored at ./data.
 * You can check *params.txt* under each model directory for the details of experiment/data settings.  
   Note that ./model_ours/params.txt and ./model_baseline/params.txt are same.
